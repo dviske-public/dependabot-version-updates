@@ -1,12 +1,9 @@
-# Basic dependabot.yml file with
-# minimum configuration for two package managers
-
 version: 2
 updates:
-  # Enable version updates for ruby/bundler
-  - package-ecosystem: "bundler"
-    # Look for `Gemfile` and `Gemfile.lock` files in the `root` directory
-    directory: "/"
-    # Check the npm registry for updates every day (weekdays)
+  - package-ecosystem: "npm"
+    directory: "/frontend"
+    target-branch: "master"
+    labels:
+      - "Security update"
     schedule:
-      interval: "daily"
+      interval: daily
